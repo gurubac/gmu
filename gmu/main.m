@@ -11,14 +11,11 @@
 #import "GamePolicyHeaders/GPGameMonitorEnvoy.h"
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        GPProcessMonitor *processMonitor = [GPProcessMonitor monitorForCurrentProcess];
-        // Check if process monitor is allocated properly
-        if (processMonitor != nil) {
-            NSLog(@"Process monitor allocated properly");
-        } else {
-            NSLog(@"Error: Process monitor allocation failed");
-        }
+     @autoreleasepool {
+        // Create an instance of the process monitor
+        GPProcessMonitor *processMonitor = [[GPProcessMonitor alloc] init];
+        
+        
     }
     return 0;
 }
