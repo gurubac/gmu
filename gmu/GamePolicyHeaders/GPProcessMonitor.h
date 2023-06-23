@@ -6,17 +6,17 @@
     struct { 
         unsigned int val[8]; 
     }  _auditTokenForCurrentProcess;
-    GPProcessInfo * _currentProcessInfo;
+//    GPProcessInfo * _currentProcessInfo;
     BOOL  _invalidated;
     NSLock * _lock;
     NSObject<OS_dispatch_queue> * _queue;
     id  _updateHandler;
 }
 
-+ (struct { unsigned int x1[8]; })auditTokenForCurrentProcess;
+/* + (struct { unsigned int x1[8]; })auditTokenForCurrentProcess; */
 + (id)monitorForCurrentProcess;
 
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)_onqueue_requestCurrentProcessInfo;
 - (id)init;
 - (void)setUpdateHandler:(id)arg1;
